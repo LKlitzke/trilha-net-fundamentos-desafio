@@ -25,6 +25,7 @@ namespace DesafioFundamentos.Models
         public void RemoverVeiculo()
         {
             Console.WriteLine("Digite a placa do veículo para remover:");
+            
             string placa = Console.ReadLine();
 
             // Verifica se o veículo existe
@@ -59,6 +60,20 @@ namespace DesafioFundamentos.Models
             {
                 Console.WriteLine("Não há veículos estacionados.");
             }
+        }
+
+        public void DefinirValorEstacionamento()
+        {
+            Console.WriteLine("Digite o preço inicial:");
+            decimal precoInicial = Convert.ToDecimal(Console.ReadLine());
+
+            Console.WriteLine("Agora digite o preço por hora:");
+            decimal precoPorHora = Convert.ToDecimal(Console.ReadLine());
+            
+            this.precoInicial = precoInicial;
+            this.precoPorHora = precoPorHora;
+
+            Console.WriteLine("Valores alterados com sucesso.");
         }
     }
 }
